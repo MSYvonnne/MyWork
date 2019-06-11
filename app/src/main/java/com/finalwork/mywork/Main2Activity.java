@@ -37,18 +37,6 @@ public class Main2Activity extends AppCompatActivity {
             Intent list= new Intent(this,MyNoteActivity.class);
             startActivity(list);
 
- /*           //测试数据库
-            RateItem item1 = new RateItem("aaa","123");
-            RateManager manager = new RateManager(this);
-            manager.add(item1);
-            manager.add(new RateItem("bbb","789"));
-            Log.i(TAG, "onOptionsItemSelected: 写入数据完毕");
-
-            //查询所有数据
-            List<RateItem> testList = manager.listAll();
-            for(RateItem i : testList){
-                Log.i(TAG, "onOptionsItemSelected: 取出数据id="+i.getId()+",name="+i.getCurName()+",rate="+i.getCurRate());
-            } */
         }
         return super.onOptionsItemSelected(item);
     }

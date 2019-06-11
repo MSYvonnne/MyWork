@@ -1,45 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<!--登录界面,用LinearLayout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
-        android:text="@string/hello"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.562" />
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/reus" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/check"
-        android:textAlignment="viewStart"
-        android:textAllCaps="true"
-        android:textSize="18sp"
-        android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93" />
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="35dp"
 
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="@string/inputName"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="18sp" />
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/user_password"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:drawableRight="@drawable/ic_visibility_off_black_24dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="@string/inputPassword"
+            android:inputType="textPassword"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_log"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/btnLogin"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp" />
+        <!--显示tv register , find_psw -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="35dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="立即注册"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="14sp" />
+                <!--layout_weight="1" layout_width="0dp"实现均分效果-->
+                <TextView
+                    android:id="@+id/tv_find_psw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="找回密码?"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="14sp" />
+        </LinearLayout>
+
+</LinearLayout>

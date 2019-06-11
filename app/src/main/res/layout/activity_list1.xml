@@ -11,7 +11,7 @@
         android:id="@+id/itemT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
+        android:text="@string/hello_blank_fragment"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/itemD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
+        android:text="@string/hello_blank_fragment"
         android:textAlignment="textEnd"
         android:textColor="@color/colorAccent"
         android:textSize="18sp" />
