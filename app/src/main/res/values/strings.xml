@@ -1,14 +1,12 @@
 <resources>
     <string name="app_name">My Work</string>
+    <string name="classiy">分类</string>
     <string name="home">首页</string>
-    <string name="func">功能</string>
-    <string name="setting">设置</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mine">我的</string>
     <string name="my_note">我的笔记</string>
     <string name="inputName">请输入登录昵称</string>
     <string name="inputPassword">请输入登录密码</string>
     <string name="btnLogin">登录</string>
     <string name="btn_register">注册</string>
+
 </resources>

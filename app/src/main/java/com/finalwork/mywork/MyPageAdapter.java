@@ -1,12 +1,12 @@
 package com.finalwork.mywork;
-import android.support.annotation.Nullable;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class MyPageAdapter extends FragmentPagerAdapter {
 
-    private String[] title = new String[]{"电影信息","内容简介"};
+    private String[] title = new String[]{"爱情","战争","喜剧"};
     public MyPageAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -15,12 +15,14 @@ public class MyPageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int i){
         if(i==0){
             return new FirstFragment();
-        }else {
+        }else if(i==1){
             return new SecondFragment();
-        }//滑动控制
+        }else {
+            return new ThirdFragment();
+        }
+        //滑动控制
     }
 
-    @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
         return title[position]; //标题

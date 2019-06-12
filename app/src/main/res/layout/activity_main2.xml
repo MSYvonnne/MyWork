@@ -7,16 +7,47 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/sliding_tabs"
+    <fragment
+        android:id="@+id/frag_classify"
+        android:name="com.finalwork.mywork.ClassifyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10" />
+    <fragment
+            android:id="@+id/frag_home"
+        android:name="com.finalwork.mywork.HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+    <fragment
+        android:id="@+id/frag_myNote"
+        android:name="com.finalwork.mywork.MineFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10" />
+
+    <RadioGroup
+        android:id="@+id/bottom_Group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed" />
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <RadioButton
+            android:id="@+id/radio_classify"
+            style="@style/my_style"
+            android:drawableTop="@drawable/ic_view_list_black_24dp"
+            android:text="@string/classiy" />
+        <RadioButton
+            android:id="@+id/radio_home"
+            style="@style/my_style"
+            android:drawableTop="@drawable/ic_pets_black_24dp"
+            android:text="@string/home" />
+        <RadioButton
+            android:id="@+id/radio_myNote"
+            style="@style/my_style"
+            android:drawableTop="@drawable/ic_mood_black_24dp"
+            android:text="@string/mine" />
+    </RadioGroup>
 
 </LinearLayout>

@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_set"
-        android:title="@string/my_note" />
+        android:id="@+id/my_note"
+        android:title="@string/my_note"
+        app:showAsAction="never" />
 </menu>

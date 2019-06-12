@@ -11,10 +11,23 @@
 
     <style name="CustomText">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#3f258f</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textStyle">italic</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="my_style">
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:drawablePadding">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:background">@drawable/shape</item>
     </style>
 </resources>
