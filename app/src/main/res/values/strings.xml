@@ -8,5 +8,7 @@
     <string name="inputPassword">请输入登录密码</string>
     <string name="btnLogin">登录</string>
     <string name="btn_register">注册</string>
+    <string name="mine_title">~记录你的评论吧~</string>
+    <string name="mine_btn">添加我的影评</string>
 
 </resources>

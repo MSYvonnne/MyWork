@@ -24,11 +24,12 @@ public class ClassifyFragment extends Fragment {
     //在分类页面中加入viewpager
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+
         super.onActivityCreated(savedInstanceState);
         ViewPager viewPager = getActivity().findViewById(R.id.viewPager);
-        MyPageAdapter pageAdapter=new MyPageAdapter(getActivity().getSupportFragmentManager());
+        MyPageAdapter pageAdapter = new MyPageAdapter(getActivity().getSupportFragmentManager());
         viewPager.setAdapter(pageAdapter);
-        TabLayout tabLayout=getActivity().findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = getActivity().findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
 }
