@@ -10,5 +10,8 @@
     <string name="btn_register">注册</string>
     <string name="mine_title">~记录你的评论吧~</string>
     <string name="mine_btn">添加我的影评</string>
-
+    <string name="the_great">了不起的盖茨比
+        导演: 巴兹·鲁赫曼
+        编剧: 巴兹·鲁赫曼 / 克雷格·皮尔斯 / F·司各特·菲茨杰拉德
+        主演: 莱昂纳多·迪卡普里奥 / 凯瑞·穆里根 / 托比·马奎尔 </string>
 </resources>

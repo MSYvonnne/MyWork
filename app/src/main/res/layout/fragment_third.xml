@@ -13,7 +13,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/comedy" />
 
     <TextView
@@ -23,8 +23,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="47dp"
-        android:text="天使爱美丽"
+        android:layout_marginBottom="0dp"
+        android:text="天使爱美丽
+导演: 让-皮埃尔·热内
+编剧: 纪尧姆·洛朗 / 让-皮埃尔·热内
+主演: 奥黛丽·塔图 / 马修·卡索维茨 / 吕菲斯 "
         android:textAlignment="center"
         android:textSize="18sp" />
 

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:src="@drawable/war" />
 
@@ -23,8 +23,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="72dp"
-        android:text="V字仇杀队"
+        android:layout_marginBottom="0dp"
+        android:text="V字仇杀队
+导演: 詹姆斯·麦克特格
+编剧: 莉莉·沃卓斯基 / 拉娜·沃卓斯基
+主演: 娜塔莉·波特曼 / 雨果·维文 / 斯蒂芬·瑞 / 斯蒂芬·弗雷 / 约翰·赫特 "
         android:textAlignment="center"
         android:textSize="18sp" />
 </RelativeLayout>
