@@ -6,4 +6,5 @@
         android:id="@+id/my_note"
         android:title="@string/my_note"
         app:showAsAction="never" />
+
 </menu>

@@ -1,13 +1,19 @@
 package com.finalwork.mywork;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class MineFragment extends Fragment {
 
+    Button btn_mine;
     public MineFragment() {
         // Required empty public constructor
     }
@@ -19,8 +25,14 @@ public class MineFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_mine, container, false);
     }
 
-    public void onClick(View v) {
-        //跳转带noteactivity
+    @Override
+    public void onActivityCreated (Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        btn_mine = getActivity().findViewById(R.id.btn_mine);
+        btn_mine.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Main3Activity.class));
+            }
+        });
     }
-
 }
