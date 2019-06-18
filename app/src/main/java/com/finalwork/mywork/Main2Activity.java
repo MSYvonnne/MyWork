@@ -1,24 +1,43 @@
 package com.finalwork.mywork;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity {
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+
+public class Main2Activity extends FragmentActivity implements Runnable {
 
     private Fragment mFragments[];
     private RadioGroup radioGroup;
     private FragmentManager fragmentManager; //管理切换的管理器
     private FragmentTransaction fragmentTransaction; //事务管理
     private RadioButton rbtClas,rbtHome,rbtMyNote;
+
+    Handler handler;
+    String senten;
+    TextView show;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        show = findViewById(R.id.show);
 
         mFragments = new Fragment[3];
         fragmentManager = getSupportFragmentManager();
@@ -65,6 +84,60 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        //获取保存句子
+        SharedPreferences sharedPreferences = getSharedPreferences("my_stn",Activity.MODE_PRIVATE);
+        senten = sharedPreferences.getString("stn","");
 
+        Thread t = new Thread(this);
+        t.start();
+        handler = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                    if (msg.what==5){
+                        Bundle bdl = (Bundle) msg.obj;
+                        senten = bdl.getString("sentence");
+                        Log.i("home页面","带回句子"+senten);
+                        //保存今日句子
+                        SharedPreferences sharedPreferences = getSharedPreferences("mystn",Activity.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("Stodaystn",senten);
+                        editor.apply();
+                        Log.i("home页面","已保存句子"+senten);
+                        show.setText(senten);
+                        Toast.makeText(Main2Activity.this,"句子已更新",Toast.LENGTH_LONG).show();
+                    }
+                super.handleMessage(msg);
+            }
+        };
+
+    }
+
+    @Override
+    public void run() {
+        Bundle bundle = getFromNET();
+        //获取msg对象，用于返回主线程
+        Message msg = handler.obtainMessage(5);
+        msg.obj = bundle;
+        handler.sendMessage(msg);
+    }
+
+    private Bundle getFromNET() {
+        Bundle bundle = new Bundle();
+        Document doc = null;
+        try{
+            java.util.Random r = new java.util.Random();
+            int i = r.nextInt(154)+3;
+            doc = Jsoup.connect("http://www.sennate.com/jdyl/106278/").get();
+            Log.i("home页面","run:"+doc.title());
+            Elements ps = doc.getElementsByTag("p");
+            Element p=ps.get(i);
+            String pt = p.text();
+            bundle.putString("sentence",pt);
+            Log.i("home页面","获取到今日句子"+pt);
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return bundle;
     }
 }
