@@ -2,7 +2,6 @@ package com.finalwork.mywork;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,7 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Main3Activity extends Activity implements OnScrollListener,
+public class ListActivity extends Activity implements OnScrollListener,
         OnItemClickListener, OnItemLongClickListener {
 
     private Context mContext;
@@ -42,7 +41,7 @@ public class Main3Activity extends Activity implements OnScrollListener,
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_list);
         tv_content = findViewById(R.id.tv_content);
         listview = findViewById(R.id.listView);
         dataList = new ArrayList<Map<String, Object>>();
@@ -76,7 +75,7 @@ public class Main3Activity extends Activity implements OnScrollListener,
             simp_adapter.notifyDataSetChanged();
             listview.setAdapter(simp_adapter);
         }
-        simp_adapter = new SimpleAdapter(mContext, getData(), R.layout.listview,
+        simp_adapter = new SimpleAdapter(mContext, getData(), R.layout.list_note,
                 new String[]{"tv_content","tv_date"},new int[]{R.id.tv_content, R.id.tv_date });
         listview.setAdapter(simp_adapter);
 
@@ -147,38 +146,26 @@ public class Main3Activity extends Activity implements OnScrollListener,
     }
 
     // 点击listview中某一项长时间的点击事件
-    // 此部分还存在问题？？？无法删去
     @Override
-    public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
-        final int n=arg2;
-        Builder builder = new AlertDialog.Builder(mContext);
-        builder.setTitle("删除该日志");
-        builder.setMessage("确认删除吗？");
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+    public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+        Log.i("ListActivity", "onItemLongClick: 长按position = " + position);
 
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String content = listview.getItemAtPosition(n) + "";
-                String content1 = content.substring(content.indexOf("=") + 1, content.indexOf(","));
-                Cursor c = dbread.query("note", null, "content=" + "'"
-                        + content1 + "'", null, null, null, null);
+        //构造对话框，进行确认操作
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("提示").setMessage("请确认是否删除当前影评").
+                setPositiveButton("是", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Log.i("ListActivity", "onClick: 对话框事件处理");
+                        //删除操作
+                        dataList.remove(position); //删除数据
+                        simp_adapter.notifyDataSetChanged(); //刷新
+                    }
+                }).setNegativeButton("否",null);
 
-                while (c.moveToNext()) {
-                    String id = c.getString(c.getColumnIndex("_id"));
-                    String sql_del = "update note set content='' where _id=" + id;
-                    dbread.execSQL(sql_del);
-                    RefreshNotesList();
-                }
-            }
+        builder.create().show();
 
-        });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        builder.create();
-        builder.show();
+        Log.i("ListActivity", "onItemLongClick:size = " + dataList.size());
         return true;
     }
 
