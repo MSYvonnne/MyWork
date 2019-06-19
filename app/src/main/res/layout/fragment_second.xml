@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    android:orientation="vertical"
+    android:id="@+id/second_frag">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
+        android:id="@+id/imageView1"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:src="@drawable/war" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="0dp"
-        android:text="V字仇杀队
-导演: 詹姆斯·麦克特格
-编剧: 莉莉·沃卓斯基 / 拉娜·沃卓斯基
-主演: 娜塔莉·波特曼 / 雨果·维文 / 斯蒂芬·瑞 / 斯蒂芬·弗雷 / 约翰·赫特 "
-        android:textAlignment="center"
-        android:textSize="18sp" />
-</RelativeLayout>
+        android:text="V字仇杀队"
+        android:background="@color/colorBackground"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="导演:    詹姆斯·麦克特格"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="编剧:    莉莉·沃卓斯基 / 拉娜·沃卓斯基"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="主演:    娜塔莉·波特曼 / 雨果·维文 / 斯蒂芬·瑞"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="剧情介绍：   未来的英国社会处于极权统治的高压下，不能容许同性恋者、异教徒等社会角色的存在，人民在黑暗政权下苟延残喘..."/>
+</LinearLayout>

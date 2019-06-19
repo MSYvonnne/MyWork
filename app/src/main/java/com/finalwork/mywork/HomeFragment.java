@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 public class HomeFragment extends Fragment {
 
     private static final String TAG ="HomeFragment" ;
-
-
     public HomeFragment() {
         // Required empty public constructor
     }

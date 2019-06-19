@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -22,7 +22,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class Main2Activity extends FragmentActivity implements Runnable {
+public class Main2Activity extends AppCompatActivity implements Runnable {
 
     private Fragment mFragments[];
     private RadioGroup radioGroup;
@@ -109,7 +109,6 @@ public class Main2Activity extends FragmentActivity implements Runnable {
                 super.handleMessage(msg);
             }
         };
-
     }
 
     @Override
@@ -134,7 +133,6 @@ public class Main2Activity extends FragmentActivity implements Runnable {
             String pt = p.text();
             bundle.putString("sentence",pt);
             Log.i("home页面","获取到今日句子"+pt);
-
         }catch (IOException e){
             e.printStackTrace();
         }

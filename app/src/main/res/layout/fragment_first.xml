@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FirstFragment">
-
+    android:id="@+id/first_frag">
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:src="@drawable/love" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="0dp"
-        android:text="了不起的盖茨比
-        导演: 巴兹·鲁赫曼
-        编剧: 巴兹·鲁赫曼 / 克雷格·皮尔斯 / F·司各特·菲茨杰拉德
-        主演: 莱昂纳多·迪卡普里奥 / 凯瑞·穆里根 / 托比·马奎尔"
-        android:textAlignment="center"
-        android:textSize="18sp" />
-</RelativeLayout>
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorBackground"
+        android:text="了不起的盖茨比"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="导演:    巴兹·鲁赫曼"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorBackground"
+        android:text="编剧:    巴兹·鲁赫曼 / 克雷格·皮尔斯" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="主演:    莱昂纳多·迪卡普里奥 / 凯瑞·穆里根 / 托比·马奎尔"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="剧情介绍：   1922年的春天，作家尼克(托比•马奎尔 饰)满怀希望离开家乡，随淘金热潮来到纽约这个新兴的城市，人们沉沦在纸醉金迷中。尼克为了追寻美国梦，放弃写作而进入证券市场，并搬入纽约附近的海湾居住，成为了神秘富豪盖茨比（莱昂纳多•迪卡普里奥 饰）的邻居，尼克不仅被邀请去赴宴，之后汤姆还带着他去找情妇寻欢，尼克渐渐迷失在这个充满魅力的世界中..."/>
+</LinearLayout>
