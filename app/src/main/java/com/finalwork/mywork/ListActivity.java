@@ -75,7 +75,7 @@ public class ListActivity extends Activity implements OnScrollListener,
             simp_adapter.notifyDataSetChanged();
             listview.setAdapter(simp_adapter);
         }
-        simp_adapter = new SimpleAdapter(mContext, getData(), R.layout.list_note,
+        simp_adapter = new SimpleAdapter(mContext, getData(), R.layout.list_style,
                 new String[]{"tv_content","tv_date"},new int[]{R.id.tv_content, R.id.tv_date });
         listview.setAdapter(simp_adapter);
 

@@ -3,9 +3,11 @@ package com.finalwork.mywork;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -13,7 +15,7 @@ import android.view.ViewGroup;
  */
 public class SecondFragment extends Fragment {
 
-
+    TextView textView;
     public SecondFragment() {
         // Required empty public constructor
     }
@@ -25,5 +27,11 @@ public class SecondFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second, container, false);
     }
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        textView = getActivity().findViewById(R.id.second);
+        textView.setMovementMethod(ScrollingMovementMethod.getInstance());
 
+    }
 }

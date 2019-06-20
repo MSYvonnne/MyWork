@@ -2,28 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/second_frag">
+    android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView1"
         android:layout_width="320dp"
         android:layout_height="180dp"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="10dp"
         android:src="@drawable/war" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="V字仇杀队"
-        android:background="@color/colorBackground"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
+        android:background="@color/colorBackground"
+        android:text="V字仇杀队"
+        android:textSize="18sp"
         android:textStyle="bold" />
     <TextView
         android:layout_width="match_parent"
@@ -36,7 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackground"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:text="编剧:    莉莉·沃卓斯基 / 拉娜·沃卓斯基"/>
@@ -47,11 +44,13 @@
         android:layout_marginRight="10dp"
         android:text="主演:    娜塔莉·波特曼 / 雨果·维文 / 斯蒂芬·瑞"/>
     <TextView
+        android:id="@+id/second"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackground"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="剧情介绍：   未来的英国社会处于极权统治的高压下，不能容许同性恋者、异教徒等社会角色的存在，人民在黑暗政权下苟延残喘..."/>
+        android:text="剧情介绍： 未来的英国社会处于极权统治的高压下，不能容许同性恋者、异教徒等社会角色的存在，人民在黑暗政权下苟延残喘。
+　　这晚，年轻女子艾薇（娜塔丽·波特曼 Natalie Portman饰）身陷险境，幸得V（雨果·维文 Hugo Weaving饰）相助。V是一个永远带着面具的神秘男子，拥有高智商和超凡战斗力。V继承了前革命英雄的使命，为了推翻荒唐极权的统治阶层，他成立了神秘的地下组织，摧毁了伦敦的标志性建筑，点燃了反政府的熊熊烈火。
+　　艾薇和V深入接触，不仅得知了V的神秘使命，还渐渐发现原来自己的身世，注定了自己和V是同一条阵线的人......"/>
 </LinearLayout>

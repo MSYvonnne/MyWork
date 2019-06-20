@@ -25,7 +25,7 @@
 
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="221dp"
+        android:layout_marginBottom="49dp"
         android:text="@string/wait"
         android:textAlignment="center"
         android:textAllCaps="false"

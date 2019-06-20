@@ -2,15 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/first_frag">
+    android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView1"
         android:layout_width="320dp"
         android:layout_height="180dp"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="10dp"
         android:src="@drawable/love" />
 
@@ -36,7 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/colorBackground"
         android:text="编剧:    巴兹·鲁赫曼 / 克雷格·皮尔斯" />
@@ -49,11 +46,12 @@
         android:text="主演:    莱昂纳多·迪卡普里奥 / 凯瑞·穆里根 / 托比·马奎尔"/>
 
     <TextView
+        android:id="@+id/first"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackground"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="剧情介绍：   1922年的春天，作家尼克(托比•马奎尔 饰)满怀希望离开家乡，随淘金热潮来到纽约这个新兴的城市，人们沉沦在纸醉金迷中。尼克为了追寻美国梦，放弃写作而进入证券市场，并搬入纽约附近的海湾居住，成为了神秘富豪盖茨比（莱昂纳多•迪卡普里奥 饰）的邻居，尼克不仅被邀请去赴宴，之后汤姆还带着他去找情妇寻欢，尼克渐渐迷失在这个充满魅力的世界中..."/>
+        android:text="剧情介绍： 1922年的春天，作家尼克(托比•马奎尔 Tobey Maguire 饰)满怀希望离开家乡，随淘金热潮来到纽约这个新兴的城市，虽然这里爵士乐流行，股票飞涨，但是贫富两极分化，人们沉沦在纸醉金迷中。尼克为了追寻美国梦，放弃写作而进入证券市场，并搬入纽约附近的海湾居住，成为了神秘富豪盖茨比（莱昂纳多•迪卡普里奥 Leonardo DiCaprio 饰）的邻居。而海湾的对岸住着尼克的表妹黛西（凯瑞•穆里根 Carey Mulligan 饰）和她的贵族丈夫汤姆（乔尔•埃哲顿 Joel Edgerton 饰），尼克不仅被邀请去赴宴，之后汤姆还带着他去找情妇寻欢，尼克渐渐迷失在这个充满魅力，以及富豪编制的假象、爱与谎言的世界中。
+　　但是只有盖茨比最特别，他是唯一让尼克感到在这个迷失城市里充满希望的人。尼克被邀请参加了盖茨比豪宅中的盛宴，还发现盖茨比心中的秘密，原来... "/>
 </LinearLayout>
