@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Work</string>
+    <string name="app_name">悦影</string>
     <string name="classiy">分类</string>
     <string name="home">首页</string>
     <string name="mine">我的</string>
@@ -11,6 +11,6 @@
     <string name="mine_title">~记录你的评论吧~</string>
     <string name="mine_btn">添加我的影评</string>
     <string name="wait">wait...</string>
-    <string name="sentence">~精选电影台词~</string>
+    <string name="sentence">~ 精选电影台词 ~</string>
 
 </resources>

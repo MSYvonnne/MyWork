@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+//列表实现界面，使用数据库显示所有影评，完成删除、编辑、新增影评的功能
 public class ListActivity extends Activity implements OnScrollListener,
         OnItemClickListener, OnItemLongClickListener {
 
@@ -62,6 +62,9 @@ public class ListActivity extends Activity implements OnScrollListener,
 
         DB = new NotesDB(mContext);
         dbread = DB.getReadableDatabase();
+
+        // 可以判断，选择清空数据库中的内容
+        // dbread.execSQL("delete from note");
         RefreshNotesList();
         listview.setOnItemClickListener(this);
         listview.setOnItemLongClickListener(this);
@@ -106,11 +109,11 @@ public class ListActivity extends Activity implements OnScrollListener,
     public void onScrollStateChanged(AbsListView arg0, int arg1) {
         switch (arg1) {
             case SCROLL_STATE_FLING:
-                Log.i("mine", "用户在手指离开屏幕之前，由于用力的滑了一下，视图能依靠惯性继续滑动");
+                Log.i("list", "用户在手指离开屏幕之前，由于用力的滑了一下，视图能依靠惯性继续滑动");
             case SCROLL_STATE_IDLE:
-                Log.i("mine", "视图已经停止滑动");
+                Log.i("list", "视图已经停止滑动");
             case SCROLL_STATE_TOUCH_SCROLL:
-                Log.i("mine", "手指没有离开屏幕，试图正在滑动");
+                Log.i("list", "手指没有离开屏幕，试图正在滑动");
         }
     }
 
@@ -147,9 +150,8 @@ public class ListActivity extends Activity implements OnScrollListener,
 
     // 点击listview中某一项长时间的点击事件
     @Override
-    public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+    public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id){
         Log.i("ListActivity", "onItemLongClick: 长按position = " + position);
-
         //构造对话框，进行确认操作
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("提示").setMessage("请确认是否删除当前影评").

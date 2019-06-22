@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical" >
-
+    <!--我的界面，从此打开影评列表-->
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"

@@ -7,7 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+//分类界面，在此加入3 viewpager
 public class ClassifyFragment extends Fragment {
 
     public ClassifyFragment() {

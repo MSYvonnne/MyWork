@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
+    <!--3 frament页面,用LinearLayout-->
     <fragment
         android:id="@+id/frag_classify"
         android:name="com.finalwork.mywork.ClassifyFragment"

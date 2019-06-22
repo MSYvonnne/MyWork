@@ -12,6 +12,7 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
+//在文本中加入滑动功能
 public class FirstFragment extends Fragment {
 
     TextView textView;

@@ -21,7 +21,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-
+//3 fragment，并完成home页面获取句子功能
 public class Main2Activity extends AppCompatActivity implements Runnable {
 
     private Fragment mFragments[];
@@ -132,7 +132,7 @@ public class Main2Activity extends AppCompatActivity implements Runnable {
             Element p=ps.get(i);
             String pt = p.text();
             bundle.putString("sentence",pt);
-            Log.i("home页面","获取到今日句子"+pt);
+            Log.i("home页面","获取到新句子"+pt);
         }catch (IOException e){
             e.printStackTrace();
         }

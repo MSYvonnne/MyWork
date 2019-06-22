@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--注册界面-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/pika"
     android:orientation="vertical">
-
+    <!--注册界面-->
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"

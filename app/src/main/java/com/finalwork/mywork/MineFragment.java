@@ -14,6 +14,7 @@ import android.widget.Button;
 /**
  * A simple {@link Fragment} subclass.
  */
+//我的界面，加入菜单，按钮控制
 public class MineFragment extends Fragment {
 
     Button btn_mine;

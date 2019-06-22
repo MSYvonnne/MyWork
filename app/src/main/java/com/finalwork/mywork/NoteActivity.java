@@ -17,6 +17,7 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+//编辑影评页面，获取时间，保存到数据库
 public class NoteActivity extends Activity {
     private TextView tv_date;
     private EditText et_content;
@@ -24,10 +25,9 @@ public class NoteActivity extends Activity {
     private Button btn_cancel;
     private NotesDB DB;
     private SQLiteDatabase dbread;
-    public static int ENTER_STATE = 0;
+    public static int ENTER_STATE ;
     public static String last_content;
     public static int id;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +57,7 @@ public class NoteActivity extends Activity {
             public void onClick(View arg0) {
                 // 获取日志内容
                 String content = et_content.getText().toString();
-                Log.d("LOG1", content);
+                Log.d("setOnClickListener", content);
                 // 获取写日志时间
                 Date date = new Date();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -71,15 +71,12 @@ public class NoteActivity extends Activity {
                 // 添加一个新的日志
                 if (ENTER_STATE == 0) {
                     if (!content.equals("")) {
-
                         sql = "insert into " + NotesDB.TABLE_NAME_NOTES+ " values(" + count + "," + "'" + content
                                 + "'" + "," + "'" + dateNum + "')";
                         Log.d("LOG", sql);
                         dbread.execSQL(sql);
                     }
-                }
-
-                // 查看并修改一个已有的日志
+                } // 查看并修改一个已有的日志
                 else {
                     Log.d("执行命令", "执行了该函数");
                     String updatesql = "update note set content='" + content + "' where _id=" + id;
@@ -95,7 +92,6 @@ public class NoteActivity extends Activity {
         btn_cancel.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
                 finish();
-
             }
         });
 

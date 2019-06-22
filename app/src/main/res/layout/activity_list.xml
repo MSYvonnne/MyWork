@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical" >
-
+    <!--影评列表页面,用LinearLayout-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

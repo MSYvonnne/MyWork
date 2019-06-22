@@ -19,8 +19,7 @@ public class MyPageAdapter extends FragmentPagerAdapter {
             return new SecondFragment();
         }else {
             return new ThirdFragment();
-        }
-        //滑动控制
+        }//滑动控制
     }
 
     @Override
