@@ -12,7 +12,7 @@
         android:background="@drawable/reus" />
 
     <TextView
-        android:id="@+id/user_name"
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -31,4 +31,12 @@
         android:text="@string/mine_btn"
         android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/search"
+        android:textSize="20sp" />
 </LinearLayout>

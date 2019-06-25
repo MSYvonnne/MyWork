@@ -159,7 +159,6 @@ public class ListActivity extends Activity implements OnScrollListener,
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Log.i("ListActivity", "onClick: 对话框事件处理");
-                        //删除操作
                         dataList.remove(position); //删除数据
                         simp_adapter.notifyDataSetChanged(); //刷新
                     }

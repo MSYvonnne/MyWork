@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity{
 
      //从SharedPreferences中根据用户名读取密码
     private String readPsw(String userName){
-        //"MODE_PRIVATE表示可以继续写入
-        SharedPreferences sp=getSharedPreferences("loginInfo", MODE_PRIVATE);
+        //MODE_PRIVATE表示可以继续写入
+        SharedPreferences sp = getSharedPreferences("loginInfo", MODE_PRIVATE);
         return sp.getString(userName , "");
     }
 

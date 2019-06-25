@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +19,8 @@ import android.widget.Button;
 public class MineFragment extends Fragment {
 
     Button btn_mine;
+    TextView username;
+
     public MineFragment() {
         // Required empty public constructor
     }
@@ -56,4 +59,5 @@ public class MineFragment extends Fragment {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

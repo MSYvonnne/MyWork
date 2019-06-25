@@ -15,9 +15,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".MainActivity" />
-        <activity android:name=".Main2Activity" >
-
-        </activity>
+        <activity android:name=".Main2Activity"></activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -26,8 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NoteActivity"></activity>
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".NoteActivity" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".SearchActivity"></activity>
     </application>
 
 </manifest>
